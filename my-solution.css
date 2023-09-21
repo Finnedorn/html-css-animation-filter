@@ -11,11 +11,12 @@
 /*--esercizio-2--*/
 
 .ex-2-square {
-    transition: 1s;
+    transition: 0.3s;
 }
 
 .ex-2-square:active {
-    width: 300px;
+    width: 600px;
+    height: 300px;
 }
 
 /*--esercizio-3--*/

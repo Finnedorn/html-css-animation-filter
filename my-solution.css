@@ -64,8 +64,57 @@
 @keyframes greyblur {
     0% {filter: none; }
     25% {filter: grayscale(1);}
-    25% {filter: blur(0.4px) grayscale(1);}
+    50% {filter: blur(0.4px) grayscale(1);}
     100% {filter: blur(1.4px) grayscale(1);}
+}
+
+.ex-8-img {
+    transition: all 3s;
+}
+
+.ex-8-img:hover {
+    border-radius: 10%;
+    animation-name: bright;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bright {
+    0% {filter: none; }
+    25% {filter: saturate(1);}
+    50% {filter: saturate(1.5) contrast(1.5);}
+    75% {filter: saturate(1.8) contrast(1.8) brightness(1.5);}
+    100% {filter: saturate(2) contrast(2) brightness(1.8);}
+}
+
+
+.well {
+    position: relative;
+}
+
+.ex-9-img {
+    
+    transition: all 3s;
+}
+
+.ex-9-img:hover {
+    animation-name: sepiablur;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sepiablur {
+    0% {filter: none;}
+    50% {
+        filter: sepia(0.5) blur(0.8); 
+        transform: scale(1.5);
+        border-radius: 10%;
+    }
+    100% {
+        filter: sepia(1.5) blur(1.5px);
+        transform: scale(1.5);
+        border-radius: 10%;
+    }
 }
 
 

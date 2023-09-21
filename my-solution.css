@@ -1,3 +1,5 @@
+/*--esercizio-1--*/
+
 .ex-1-square {
     transition: linear 2s;
 }
@@ -5,6 +7,8 @@
 .ex-1-square:hover {
     background-color: red;
 }
+
+/*--esercizio-2--*/
 
 .ex-2-square {
     transition: 1s;
@@ -14,6 +18,8 @@
     width: 300px;
 }
 
+/*--esercizio-3--*/
+
 .ex-3-square {
     transition: 1s;
 }
@@ -22,6 +28,8 @@
     border-radius: 50%;
 }
 
+/*--esercizio-4--*/
+
 .ex-4-square {
     animation-name: nomore;
     animation-duration: 2s;
@@ -29,9 +37,15 @@
 }
 
 @keyframes nomore {
-    from {opacity: 1;}
-    to {opacity: 0;}
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
+
+/*--esercizio-5--*/
 
 .ex-5-square {
     transition: 0.5s;
@@ -47,6 +61,8 @@
     height: 40px;
 }
 
+/*--esercizio-6--*/
+
 .ex-6-img {
     transition: 0.5s;
 }
@@ -55,6 +71,8 @@
     filter: grayscale(1);
 }
 
+/*--esercizio-7--*/
+
 .ex-7-img:hover {
     animation-name: greyblur;
     animation-duration: 3s;
@@ -62,11 +80,21 @@
 }
 
 @keyframes greyblur {
-    0% {filter: none; }
-    25% {filter: grayscale(1);}
-    50% {filter: blur(0.4px) grayscale(1);}
-    100% {filter: blur(1.4px) grayscale(1);}
+    0% {
+        filter: none; 
+    }
+    35% {
+        filter: grayscale(1);
+    }
+    70% {
+        filter: blur(1px) grayscale(1);
+    }
+    100% {
+        filter: blur(2px) grayscale(1);
+    }
 }
+
+/*--esercizio-8--*/
 
 .ex-8-img {
     transition: all 3s;
@@ -80,17 +108,24 @@
 }
 
 @keyframes bright {
-    0% {filter: none; }
-    25% {filter: saturate(1);}
-    50% {filter: saturate(1.5) contrast(1.5);}
-    75% {filter: saturate(1.8) contrast(1.8) brightness(1.5);}
-    100% {filter: saturate(2) contrast(2) brightness(1.8);}
+    0% {
+        filter: none; 
+    }
+    25% {
+        filter: saturate(1);
+    }
+    50% {
+        filter: saturate(1.5) contrast(1.5);
+    }
+    75% {
+        filter: saturate(1.8) contrast(1.8) brightness(1.5);
+    }
+    100% {
+        filter: saturate(2) contrast(2) brightness(1.8);
+    }
 }
 
-
-.well {
-    position: relative;
-}
+/*--esercizio-9--*/
 
 .ex-9-img {
     
@@ -117,5 +152,128 @@
     }
 }
 
+/*--esercizio-10--*/
 
+.ex-10-icon {
+    animation: rotation 1s linear infinite;
+}
 
+@keyframes rotation {
+    from { 
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*--esercizio-11--*/
+
+.ex-11-icon:hover {
+    animation: half-rotation 1s linear backwards;
+    animation-direction: alternate;
+}
+
+@keyframes half-rotation {
+    0% { 
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(270deg);
+    }
+}
+
+/*--esercizio-12--*/
+
+.ex-12-top-white {
+    animation: top-white-12 0.8s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes top-white-12 {
+    0% {
+        left: 20%;
+    }
+    100% {
+        left: 50%;
+    }
+}
+
+.ex-12-bottom-white {
+    animation: bottom-white-12 0.8s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes bottom-white-12 {
+    0% {
+        right: 20%;
+    }
+    100% {
+        right: 50%;
+    }
+}
+
+/*--esercizio-13--*/
+
+.ex-13-top-white {
+    animation: top-white-13 2s infinite;
+}
+
+@keyframes top-white-13 {
+    0% {
+        left: 10%;
+        top: -10px;
+    }
+    20% {
+        left: 80%;
+        top: -10px;
+    }
+    40% {
+        left: 80%;
+        top: 50px;
+    }
+    60% {
+        left: -10%;
+        top: 50px;
+    }
+    80% {
+        left: -10%;
+        top: -10px;
+    }
+    100% {
+        left: 10%;
+        top: -10px;
+    }
+}
+
+.ex-13-bottom-white {
+    animation: bottom-white-13 2s infinite;
+    animation-delay: 2s;
+}
+
+@keyframes bottom-white-13 {
+    0% {
+        right: 20%;
+        bottom: -10px;
+    }
+    20% {
+        right: 80%;
+        bottom: -10px;
+    }
+    40% {
+        right: 80%;
+        bottom: 50px;
+    }
+    60% {
+        right: -10%;
+        bottom: 50px;
+    }
+    80% {
+        right: -10%;
+        bottom: -10px;
+    }
+    100% {
+        right: 20%;
+        bottom: -10px;
+    }
+}
